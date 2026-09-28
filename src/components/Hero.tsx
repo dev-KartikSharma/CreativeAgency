@@ -33,7 +33,7 @@ export const Hero: React.FC<HeroProps> = ({ className }) => {
         className="pointer-events-none absolute inset-0 z-0 bg-repeat object-cover"
         style={{
           opacity: 0.12,
-          backgroundImage: "url('/assets/brutalist-texture.svg')",
+          backgroundImage: `url('${import.meta.env.BASE_URL}assets/brutalist-texture.svg')`,
           backgroundSize: '400px 400px',
         }}
         aria-hidden="true"

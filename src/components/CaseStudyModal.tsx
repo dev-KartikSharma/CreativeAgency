@@ -157,13 +157,13 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                         }}
                       >
                         <img
-                          src="/projects/colter-roll.png"
+                          src={`${import.meta.env.BASE_URL}projects/colter-roll.png`}
                           alt="Colter Media Brand Guidelines Presentation Deck"
                           className="w-full h-auto block"
                           loading="eager"
                         />
                         <img
-                          src="/projects/colter-roll.png"
+                          src={`${import.meta.env.BASE_URL}projects/colter-roll.png`}
                           alt="Colter Media Brand Guidelines Presentation Deck Repeat"
                           className="w-full h-auto block"
                           loading="eager"

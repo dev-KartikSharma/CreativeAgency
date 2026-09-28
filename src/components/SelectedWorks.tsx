@@ -155,13 +155,13 @@ export const SelectedWorks: React.FC<SelectedWorksProps> = ({
                         }}
                       >
                         <img
-                          src="/projects/colter-roll.png"
+                          src={`${import.meta.env.BASE_URL}projects/colter-roll.png`}
                           alt="Colter Media Brand Guidelines Deck"
                           className="w-full h-auto block select-none"
                           loading="eager"
                         />
                         <img
-                          src="/projects/colter-roll.png"
+                          src={`${import.meta.env.BASE_URL}projects/colter-roll.png`}
                           alt="Colter Media Brand Guidelines Deck Repeat"
                           className="w-full h-auto block select-none"
                           loading="eager"
