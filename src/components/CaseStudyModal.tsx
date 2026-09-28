@@ -139,7 +139,8 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
 
                     {/* Infinite Scrolling Guidelines Reel Viewport */}
                     <div
-                      className="relative w-full h-[420px] sm:h-[500px] rounded-xl overflow-hidden border border-[#2C2A2F] bg-[#100F12] select-none"
+                      className="relative w-full h-[320px] sm:h-[450px] md:h-[500px] rounded-xl overflow-hidden border border-[#2C2A2F] bg-[#100F12] select-none cursor-pointer"
+                      onClick={() => setIsPdfReelPaused(!isPdfReelPaused)}
                       onMouseEnter={() => setIsPdfReelPaused(true)}
                       onMouseLeave={() => setIsPdfReelPaused(false)}
                     >

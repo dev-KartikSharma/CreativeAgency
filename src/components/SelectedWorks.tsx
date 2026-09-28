@@ -93,20 +93,20 @@ export const SelectedWorks: React.FC<SelectedWorksProps> = ({
     <section
       id={id}
       className={cn(
-        'scroll-mt-20 relative w-full bg-[#111012] border-b border-[#2C2A2F] py-20 sm:py-24 lg:py-32',
+        'scroll-mt-20 relative w-full bg-[#111012] border-b border-[#2C2A2F] py-14 sm:py-24 lg:py-32',
         className
       )}
     >
-      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 md:px-14 lg:px-20">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-10 md:px-14 lg:px-20">
         {/* ========================================================= */}
         {/* HEADER: Clean, Editorial & Confident                      */}
         {/* ========================================================= */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-14 sm:pb-16 border-b border-[#2C2A2F]">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-6 pb-8 sm:pb-16 border-b border-[#2C2A2F]">
           <div>
-            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#E63B19] mb-3 block">
+            <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#E63B19] mb-2 sm:mb-3 block">
               // 02 · SELECTED WORKS
             </span>
-            <h2 className="font-display font-black text-5xl sm:text-7xl md:text-8xl lg:text-9xl uppercase text-white tracking-tight leading-none">
+            <h2 className="font-display font-black text-4xl sm:text-7xl md:text-8xl lg:text-9xl uppercase text-white tracking-tight leading-none">
               CASE STUDIES
             </h2>
           </div>
@@ -121,7 +121,7 @@ export const SelectedWorks: React.FC<SelectedWorksProps> = ({
         {/* ========================================================= */}
         {/* CLEAN MULTI-COLUMN EDITORIAL GRID (Matching Reference)    */}
         {/* ========================================================= */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pt-12 sm:pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 pt-8 sm:pt-16">
           {projects.map((project, idx) => (
             <motion.article
               key={project.id}
@@ -135,9 +135,9 @@ export const SelectedWorks: React.FC<SelectedWorksProps> = ({
               className="group cursor-pointer flex flex-col select-none"
             >
               {/* =================================================== */}
-              {/* CARD MEDIA CONTAINER (Tall Vertical Aspect Ratio)   */}
+              {/* CARD MEDIA CONTAINER (Responsive Aspect Ratio)      */}
               {/* =================================================== */}
-              <div className="relative w-full aspect-[3/4] rounded-lg overflow-hidden border border-[#2C2A2F] bg-[#18171A] group-hover:border-[#E63B19]/70 group-hover:shadow-[0_10px_30px_rgba(230,59,25,0.12)] transition-all duration-500 ease-out">
+              <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] rounded-lg overflow-hidden border border-[#2C2A2F] bg-[#18171A] group-hover:border-[#E63B19]/70 group-hover:shadow-[0_10px_30px_rgba(230,59,25,0.12)] transition-all duration-500 ease-out">
                 {/* 1. COLTER MEDIA CARD VISUAL: Live Infinite Auto-Scrolling PDF Reel */}
                 {project.type === 'colter' && (
                   <div className="relative w-full h-full overflow-hidden bg-[#141316] flex flex-col justify-between">

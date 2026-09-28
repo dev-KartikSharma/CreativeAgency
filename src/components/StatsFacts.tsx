@@ -41,7 +41,7 @@ export const StatsFacts: React.FC<StatsFactsProps> = ({
       )}
       style={{ backgroundColor: '#111012' }}
     >
-      <div className="mx-auto max-w-[1440px] px-6 sm:px-10 md:px-14 lg:px-20 flex flex-col gap-6 sm:gap-8">
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-10 md:px-14 lg:px-20 flex flex-col gap-5 sm:gap-8">
         {/* Section Tag */}
         <div className="flex items-center gap-2">
           <span className="font-mono text-xs font-semibold uppercase tracking-widest text-[#E63B19]">
@@ -55,17 +55,17 @@ export const StatsFacts: React.FC<StatsFactsProps> = ({
             <div
               key={stat.label}
               className={cn(
-                'flex flex-col items-center justify-center text-center py-3 sm:py-6 px-3 sm:px-6',
+                'flex flex-col items-center justify-center text-center py-2.5 sm:py-6 px-1.5 sm:px-6',
                 idx < stats.length - 1 && 'border-r border-[#2C2A2F]'
               )}
             >
               {/* Stat Value */}
-              <span className="font-display font-black text-white text-4xl sm:text-6xl md:text-7xl lg:text-[80px] leading-none tracking-tight select-none">
+              <span className="font-display font-black text-white text-3xl sm:text-5xl md:text-7xl lg:text-[80px] leading-none tracking-tight select-none">
                 {stat.value}
               </span>
 
               {/* Stat Label */}
-              <span className="font-mono text-[11px] sm:text-xs font-medium uppercase tracking-[0.25em] text-[#8D8B91] mt-3 select-none">
+              <span className="font-mono text-[9px] sm:text-xs font-medium uppercase tracking-[0.18em] sm:tracking-[0.25em] text-[#8D8B91] mt-2 sm:mt-3 select-none">
                 {stat.label}
               </span>
             </div>
