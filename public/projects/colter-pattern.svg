@@ -1,0 +1,18 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="240" height="140" viewBox="0 0 240 140">
+  <defs>
+    <!-- Colter Link Motif -->
+    <g id="link" opacity="0.16">
+      <path d="M12 40 L50 12 L100 12 L62 40 Z" fill="#E0E0E0"/>
+      <path d="M40 70 L78 42 L128 42 L90 70 Z" fill="#B23712"/>
+      <path d="M18 42 L32 32 L46 42 L32 52 Z" fill="none" stroke="#E0E0E0" stroke-width="6"/>
+      <path d="M72 42 L86 32 L100 42 L86 52 Z" fill="none" stroke="#B23712" stroke-width="6"/>
+    </g>
+  </defs>
+  <rect width="100%" height="100%" fill="#161514"/>
+  <!-- Staggered grid repetition -->
+  <use href="#link" x="0" y="0"/>
+  <use href="#link" x="120" y="0"/>
+  <use href="#link" x="60" y="70"/>
+  <use href="#link" x="180" y="70"/>
+  <use href="#link" x="-60" y="70"/>
+</svg>
