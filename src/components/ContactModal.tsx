@@ -146,10 +146,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 {/* Contact Links Stack (Figma Node #11:37) */}
                 <div className="flex flex-col gap-2">
                   <a
-                    href="mailto:hello@fusionforce.co"
-                    className="font-mono font-medium text-xs sm:text-[13px] uppercase text-white hover:text-[#E63B19] focus:text-[#E63B19] transition-colors inline-block w-fit focus:outline-none focus:underline"
+                    href="mailto:kartiksharma17012007@gmail.com"
+                    className="font-mono font-medium text-xs sm:text-[13px] lowercase text-white hover:text-[#E63B19] focus:text-[#E63B19] transition-colors inline-block w-fit focus:outline-none focus:underline"
                   >
-                    hello@fusionforce.co
+                    kartiksharma17012007@gmail.com
                   </a>
                   <a
                     href="tel:+919599829714"
