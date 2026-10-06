@@ -146,7 +146,9 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 {/* Contact Links Stack (Figma Node #11:37) */}
                 <div className="flex flex-col gap-2">
                   <a
-                    href="mailto:kartiksharma17012007@gmail.com"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=kartiksharma17012007@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-mono font-medium text-xs sm:text-[13px] lowercase text-white hover:text-[#E63B19] focus:text-[#E63B19] transition-colors inline-block w-fit focus:outline-none focus:underline"
                   >
                     kartiksharma17012007@gmail.com

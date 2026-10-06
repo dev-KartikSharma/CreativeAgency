@@ -235,7 +235,12 @@ function App() {
           <span>Have an idea worth making real?</span>
           <GlobeIcon />
         </div>
-        <a className="contact-title" href="mailto:kartiksharma17012007@gmail.com">
+        <a
+          className="contact-title"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=kartiksharma17012007@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>Let&apos;s</span>
           <span>make it.</span>
         </a>
@@ -248,7 +253,13 @@ function App() {
           <ArrowIcon />
         </button>
         <div className="contact-bottom">
-          <a href="mailto:kartiksharma17012007@gmail.com">kartiksharma17012007@gmail.com</a>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=kartiksharma17012007@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            kartiksharma17012007@gmail.com
+          </a>
           <div>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="#">LinkedIn</a>
