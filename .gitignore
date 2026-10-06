@@ -25,3 +25,7 @@ dist-ssr
 
 # Vercel
 .vercel
+
+# Figma imports & extracts
+figma/
+*.zip

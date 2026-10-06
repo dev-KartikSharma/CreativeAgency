@@ -161,35 +161,60 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               </div>
             </div>
 
-            {/* Right Column: Social Connection Card (Figma Node #11:40) */}
-            <div className="flex flex-col w-full lg:w-[580px] max-w-[580px] gap-6 sm:gap-8 shrink-0">
-              {/* Accent Header (Figma Node #11:41) */}
-              <h3 className="font-display font-black text-2xl sm:text-4xl lg:text-[48px] uppercase tracking-tight text-[#E63B19] leading-none">
-                Connect with us.
+            {/* Right Column: Inquire / Connect Cards */}
+            <div className="flex flex-col w-full lg:w-[580px] max-w-[580px] gap-5 sm:gap-6 shrink-0">
+              {/* Accent Header */}
+              <h3 className="font-display font-black text-2xl sm:text-4xl lg:text-[44px] uppercase tracking-tight text-[#E63B19] leading-none">
+                Start a conversation.
               </h3>
 
-              {/* Instagram Card (with left-to-right orange hover slide & popup) */}
+              {/* Action 1: Connect to Call Button */}
               <a
-                href="https://instagram.com/"
+                href="https://cal.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Connect with us on Instagram"
-                className="group relative flex items-center justify-between bg-white text-black p-5 sm:p-8 rounded-[4px] overflow-hidden hover:-translate-y-1.5 hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#E63B19]"
+                aria-label="Connect to Call or Schedule Meeting"
+                className="group relative flex items-center justify-between bg-white text-black p-5 sm:p-7 rounded-[4px] overflow-hidden hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#E63B19]"
               >
-                {/* Orange sliding fill coming from left to right on hover */}
                 <div
                   className="absolute inset-0 bg-[#E63B19] -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out pointer-events-none"
                   aria-hidden="true"
                 />
+                <div className="relative z-10 flex flex-col">
+                  <span className="font-display font-black text-2xl sm:text-3xl lg:text-[34px] uppercase text-black group-hover:text-white transition-colors duration-200 leading-none">
+                    Book a Call
+                  </span>
+                  <span className="font-mono text-[10px] sm:text-[11px] text-[#555] group-hover:text-white/80 transition-colors duration-200 uppercase tracking-widest mt-1.5">
+                    15-min discovery & strategy
+                  </span>
+                </div>
+                <div className="relative z-10 w-11 h-11 rounded-full bg-black flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105">
+                  <ArrowRightIcon className="w-5 h-5 text-white transition-transform duration-200 group-hover:translate-x-1" />
+                </div>
+              </a>
 
-                {/* Brand Handle Label */}
-                <span className="relative z-10 font-display font-black text-3xl sm:text-4xl lg:text-[44px] uppercase text-black leading-none select-none">
-                  @Instagram
-                </span>
-
-                {/* Arrow Icon Badge */}
-                <div className="relative z-10 w-10 h-10 rounded-full bg-black flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105">
-                  <ArrowRightIcon className="w-[18px] h-[18px] text-white transition-transform duration-200 group-hover:translate-x-1" />
+              {/* Action 2: DM on Instagram Button */}
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="DM us on Instagram"
+                className="group relative flex items-center justify-between border-2 border-[#2B2A28] bg-[#161518] text-white p-5 sm:p-7 rounded-[4px] overflow-hidden hover:border-[#E63B19] hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#E63B19]"
+              >
+                <div
+                  className="absolute inset-0 bg-[#E63B19] -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out pointer-events-none"
+                  aria-hidden="true"
+                />
+                <div className="relative z-10 flex flex-col">
+                  <span className="font-display font-black text-2xl sm:text-3xl lg:text-[34px] uppercase text-white group-hover:text-white leading-none">
+                    DM on Instagram
+                  </span>
+                  <span className="font-mono text-[10px] sm:text-[11px] text-[#8D8B91] group-hover:text-white/80 transition-colors duration-200 uppercase tracking-widest mt-1.5">
+                    Fast response / @Instagram
+                  </span>
+                </div>
+                <div className="relative z-10 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105 group-hover:bg-black">
+                  <ArrowRightIcon className="w-5 h-5 text-white transition-transform duration-200 group-hover:translate-x-1" />
                 </div>
               </a>
             </div>
