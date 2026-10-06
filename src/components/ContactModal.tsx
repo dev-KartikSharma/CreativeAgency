@@ -133,7 +133,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
               {/* Headline Stack (Figma Node #11:32) */}
               <div className="flex flex-col font-display font-black uppercase text-white leading-[0.85] tracking-tight text-5xl sm:text-8xl md:text-9xl lg:text-[140px]">
                 <span>Let's</span>
-                <span>Talk.</span>
+                <span>Talk</span>
               </div>
 
               {/* Details Stack (Figma Node #11:35) */}
@@ -167,7 +167,7 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
             <div className="flex flex-col w-full lg:w-[580px] max-w-[580px] gap-5 sm:gap-6 shrink-0">
               {/* Accent Header */}
               <h3 className="font-display font-black text-2xl sm:text-4xl lg:text-[44px] uppercase tracking-tight text-[#E63B19] leading-none">
-                Start a conversation.
+                Start a conversation
               </h3>
 
               {/* Action 1: Connect to Call Button */}

@@ -111,7 +111,7 @@ function App() {
           <div className="hero-title" aria-label="Make them feel">
             <span>Make</span>
             <span className="hero-title-offset hero-title-outline">them</span>
-            <span className="hero-title-accent">feel.</span>
+            <span className="hero-title-accent">feel</span>
           </div>
 
           <figure className="hero-visual">
@@ -135,7 +135,7 @@ function App() {
 
       <section className="proof" aria-label="Studio statistics">
         <div className="proof-intro">
-          <span>Small team. Loud impact.</span>
+          <span>Small team / Loud impact</span>
           <p>Senior minds, close collaboration and no unnecessary layers between the idea and the work.</p>
         </div>
         {[
@@ -154,7 +154,7 @@ function App() {
         <header className="section-heading">
           <div>
             <span className="eyebrow">02 / Selected obsessions</span>
-            <h2>Work that<br /><i>sticks.</i></h2>
+            <h2>Work that<br /><i>sticks</i></h2>
           </div>
           <p>
             Identity, digital and campaign work created to live in people&apos;s heads—not just their feeds.
@@ -191,7 +191,7 @@ function App() {
       <section className="capabilities">
         <div className="capabilities-statement">
           <span className="eyebrow">03 / What we do</span>
-          <h2>Sharp<br /><i>thinking.</i></h2>
+          <h2>Sharp<br /><i>thinking</i></h2>
           <p>
             Strategy finds the tension. Design makes it visible. Technology gives it somewhere to go.
           </p>
@@ -225,8 +225,8 @@ function App() {
         <span className="eyebrow">04 / Our point of view</span>
         <p>
           Safe work gets<br />
-          <span>scrolled past.</span><br />
-          We make what sticks.
+          <span>scrolled past</span><br />
+          We make what sticks
         </p>
       </section>
 
@@ -242,7 +242,7 @@ function App() {
           rel="noopener noreferrer"
         >
           <span>Let&apos;s</span>
-          <span>make it.</span>
+          <span>make it</span>
         </a>
         <button
           type="button"
