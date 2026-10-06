@@ -1,0 +1,7 @@
+node_modules
+.git
+figma
+dist
+tests
+.playwright-mcp
+*.zip
