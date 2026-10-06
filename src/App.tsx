@@ -261,7 +261,7 @@ function App() {
             kartiksharma17012007@gmail.com
           </a>
           <div>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://www.instagram.com/kartik.ssharma_/" target="_blank" rel="noopener noreferrer">Instagram</a>
             <a href="#">LinkedIn</a>
           </div>
           <span>© 2026 CM Studio</span>

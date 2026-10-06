@@ -195,12 +195,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 </div>
               </a>
 
-              {/* Action 2: DM on Instagram Button */}
+              {/* Action 2: INSTAGRAM Button */}
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/kartik.ssharma_/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="DM us on Instagram"
+                aria-label="Connect with us on Instagram"
                 className="group relative flex items-center justify-between border-2 border-[#2B2A28] bg-[#161518] text-white p-5 sm:p-7 rounded-[4px] overflow-hidden hover:border-[#E63B19] hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#E63B19]"
               >
                 <div
@@ -209,10 +209,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 />
                 <div className="relative z-10 flex flex-col">
                   <span className="font-display font-black text-2xl sm:text-3xl lg:text-[34px] uppercase text-white group-hover:text-white leading-none">
-                    DM on Instagram
+                    INSTAGRAM
                   </span>
                   <span className="font-mono text-[10px] sm:text-[11px] text-[#8D8B91] group-hover:text-white/80 transition-colors duration-200 uppercase tracking-widest mt-1.5">
-                    Fast response / @Instagram
+                    @kartik.ssharma_
                   </span>
                 </div>
                 <div className="relative z-10 w-11 h-11 rounded-full bg-white/10 flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105 group-hover:bg-black">
