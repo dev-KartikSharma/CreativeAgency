@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CustomCursor } from "./components/CustomCursor";
 import { ContactModal } from "./components/ContactModal";
+import { ProjectPage } from "./components/ProjectPage";
+import { PROJECTS_DATA } from "./data/projectsData";
 
 const services = [
   {
@@ -27,14 +29,16 @@ const services = [
 
 const projects = [
   {
+    slug: "showcase-reel",
     num: "01",
-    title: "Colter Media",
-    category: "Brand Identity / Guidelines",
+    title: "Agency Showcase",
+    category: "Capabilities / Motion Reel",
     image: `${import.meta.env.BASE_URL}projects/colter-roll.png`,
     isReel: true,
     className: "project-card project-card--wide",
   },
   {
+    slug: "new-form",
     num: "02",
     title: "New Form",
     category: "Fashion / Digital",
@@ -43,6 +47,7 @@ const projects = [
     className: "project-card project-card--portrait",
   },
   {
+    slug: "signal",
     num: "03",
     title: "Signal",
     category: "Technology / Identity",
@@ -51,6 +56,7 @@ const projects = [
     className: "project-card project-card--square",
   },
   {
+    slug: "ritual",
     num: "04",
     title: "Ritual",
     category: "Art / Experience",
@@ -81,6 +87,60 @@ function GlobeIcon() {
 function App() {
   const [activeService, setActiveService] = useState(0);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [activeProjectSlug, setActiveProjectSlug] = useState<string | null>(null);
+
+  // Sync state with URL hash (e.g. #/project/showcase-reel or #/project/new-form)
+  useEffect(() => {
+    const handleHash = () => {
+      const hash = window.location.hash;
+      if (hash.startsWith("#/project/")) {
+        const slug = hash.replace("#/project/", "");
+        if (PROJECTS_DATA[slug]) {
+          setActiveProjectSlug(slug);
+          window.scrollTo(0, 0);
+          return;
+        }
+      }
+      setActiveProjectSlug(null);
+    };
+
+    handleHash();
+    window.addEventListener("hashchange", handleHash);
+    return () => window.removeEventListener("hashchange", handleHash);
+  }, []);
+
+  const handleOpenProject = (slug: string) => {
+    setActiveProjectSlug(slug);
+    window.location.hash = `#/project/${slug}`;
+    window.scrollTo(0, 0);
+  };
+
+  const handleBackToHome = () => {
+    setActiveProjectSlug(null);
+    window.location.hash = "#work";
+    setTimeout(() => {
+      const workEl = document.getElementById("work");
+      if (workEl) workEl.scrollIntoView({ behavior: "smooth" });
+    }, 50);
+  };
+
+  // If a project page is active, render the dedicated ProjectPage view
+  if (activeProjectSlug && PROJECTS_DATA[activeProjectSlug]) {
+    return (
+      <main>
+        <ProjectPage
+          project={PROJECTS_DATA[activeProjectSlug]}
+          onBack={handleBackToHome}
+          onOpenContact={() => setIsContactOpen(true)}
+          onSelectProject={handleOpenProject}
+        />
+        {/* Inquiry Modal with Connect to Call & DM on Insta */}
+        <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+        {/* Inverted Orange Pill Cursor */}
+        <CustomCursor />
+      </main>
+    );
+  }
 
   return (
     <main>
@@ -163,13 +223,21 @@ function App() {
 
         <div className="project-grid">
           {projects.map((project) => (
-            <a className={project.className} href="#" key={project.title}>
+            <a
+              className={project.className}
+              href={`#/project/${project.slug}`}
+              key={project.title}
+              onClick={(e) => {
+                e.preventDefault();
+                handleOpenProject(project.slug);
+              }}
+            >
               {project.isReel ? (
                 <div className="colter-reel-container">
                   <div className="colter-reel-vignette-top" />
                   <div className="colter-reel-track">
-                    <img src={project.image} alt="Colter Media Brand Guidelines Deck" />
-                    <img src={project.image} alt="Colter Media Brand Guidelines Deck Repeat" />
+                    <img src={project.image} alt="Agency Capabilities Motion Deck" />
+                    <img src={project.image} alt="Agency Capabilities Motion Deck Repeat" />
                   </div>
                   <div className="colter-reel-vignette-bottom" />
                 </div>

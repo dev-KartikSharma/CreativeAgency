@@ -29,3 +29,7 @@ dist-ssr
 # Figma imports & extracts
 figma/
 *.zip
+
+.vercel
+
+showcase-video/
