@@ -54,7 +54,7 @@ const projects = [
     category: "Fashion / Digital",
     image:
       "https://images.unsplash.com/photo-1715784337197-70ef917be0e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
-    className: "project-card project-card--portrait",
+    className: "project-card project-card--square",
   },
   {
     slug: "signal",
@@ -63,15 +63,6 @@ const projects = [
     category: "Technology / Identity",
     image:
       "https://images.unsplash.com/photo-1722170225004-929efa1546f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1400",
-    className: "project-card project-card--square",
-  },
-  {
-    slug: "ritual",
-    num: "05",
-    title: "Ritual",
-    category: "Art / Experience",
-    image:
-      "https://images.unsplash.com/photo-1664477615410-ee1a7f540a7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
     className: "project-card project-card--landscape",
   },
 ];
