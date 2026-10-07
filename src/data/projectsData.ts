@@ -28,23 +28,80 @@ export interface ProjectDetail {
 }
 
 export const PROJECTS_DATA: Record<string, ProjectDetail> = {
+  "colter-media": {
+    slug: "colter-media",
+    num: "01",
+    title: "Colter Media",
+    category: "Brand Identity / Guidelines",
+    year: "2026",
+    client: "Colter Media Inc. / New York",
+    role: "Brand Identity, Typography, Design System, Print & Guidelines Deck",
+    tagline: "A monumental identity system engineered for high-cadence digital media",
+    overview:
+      "Colter Media required an architectural rebrand to solidify its standing as a premiere digital and media production house in New York City. We engineered an interlocking visual identity, custom typographic guidelines, and a comprehensive multi-volume brand manual calibrated for both digital publishing and tactile print collateral.",
+    isReel: true,
+    heroImage: "/projects/colter-roll.png",
+    deliverables: [
+      "Master Logomark & Monogram Suite",
+      "Comprehensive Brand Guidelines Manual (PDF)",
+      "Bespoke Monospace & Display Typography Scale",
+      "High-Cadence Editorial Layout System",
+      "Motion Identity & Title Card Architecture",
+    ],
+    metrics: [
+      { value: "48+", label: "Brand guideline specifications" },
+      { value: "2.4M+", label: "Audience reach across media channels" },
+      { value: "100%", label: "Consistent cross-platform adoption" },
+    ],
+    breakdown: [
+      {
+        heading: "01 / Interlocking Symbol & Visual Logic",
+        body:
+          "The core mark is constructed from precision-engineered interlocking geometry—symbolizing connection, transmission, and structural integrity. Every radius and counter-form is calculated to stay razor-sharp at 16px favicons and 60-foot billboards alike.",
+        quote: "Precision isn't just an aesthetic; it is the ultimate signal of authority.",
+      },
+      {
+        heading: "02 / Systematic Typography & Hierarchy",
+        body:
+          "We paired brutalist, condensed display typography with high-legibility technical monospace metrics. This balance yields instant editorial distinction while allowing rapid layout assembly across fast-paced production deadlines.",
+      },
+      {
+        heading: "03 / The Living Guidelines Deck",
+        body:
+          "Rather than a static PDF destined to sit forgotten in a cloud drive, we designed the Colter Media guidelines as a continuous, modular system—specifying color chemistry, safe zones, grid proportions, and dynamic digital assets.",
+      },
+    ],
+    gallery: [
+      {
+        image: "/projects/colter-media-guidelines.png",
+        caption: "Colter Media brand guidelines manual & typographic rules",
+      },
+      {
+        image: "/projects/colter-media-logo.png",
+        caption: "Interlocking symbol geometry & mark exploration",
+      },
+      {
+        image: "/projects/colter-pages/page-1.png",
+        caption: "Editorial layout specification & color science",
+      },
+    ],
+  },
+
   "showcase-reel": {
     slug: "showcase-reel",
-    num: "01",
+    num: "02",
     title: "Agency Showcase Reel",
-    category: "Capabilities / Showreel",
+    category: "Capabilities / Motion Reel",
     year: "2026",
     client: "Creative Marketing Collective",
-    role: "Direction, 3D, Motion Systems, Brand Architecture",
-    tagline: "What happens when ruthless strategy meets kinetic motion",
+    role: "Creative Direction, 3D Motion, Kinetic Typography, Sound Design",
+    tagline: "What happens when ruthless brand strategy meets kinetic visual velocity",
     overview:
       "This showcase is not a single client case study—it is an unfiltered demonstration of our full spectrum capabilities. From high-fidelity brand systems and bespoke web experiences to 60 FPS motion graphics and launch campaigns, this reel distills how we turn attention into measurable brand velocity.",
     videoHorizontal: "/video/client_showcase_30s.mp4",
     videoVertical: "/video/client_showcase_30s_vertical.mp4",
     videoPoster: "/video/client_showcase_thumbnail.png",
     isAgencyShowcase: true,
-    isReel: true,
-    heroImage: "/projects/colter-roll.png",
     deliverables: [
       "Brand Positioning & Visual Identity",
       "Interactive Digital Web Systems",
@@ -93,7 +150,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
 
   "new-form": {
     slug: "new-form",
-    num: "02",
+    num: "03",
     title: "New Form",
     category: "Fashion / Digital",
     year: "2026",
@@ -141,7 +198,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
 
   "signal": {
     slug: "signal",
-    num: "03",
+    num: "04",
     title: "Signal",
     category: "Technology / Identity",
     year: "2025",
@@ -189,7 +246,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
 
   "ritual": {
     slug: "ritual",
-    num: "04",
+    num: "05",
     title: "Ritual",
     category: "Art / Experience",
     year: "2026",

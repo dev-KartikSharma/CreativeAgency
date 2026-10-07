@@ -33,3 +33,4 @@ figma/
 .vercel
 
 showcase-video/
+.env*

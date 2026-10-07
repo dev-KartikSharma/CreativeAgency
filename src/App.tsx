@@ -29,17 +29,27 @@ const services = [
 
 const projects = [
   {
-    slug: "showcase-reel",
+    slug: "colter-media",
     num: "01",
-    title: "Agency Showcase",
-    category: "Capabilities / Motion Reel",
+    title: "Colter Media",
+    category: "Brand Identity / Guidelines",
     image: `${import.meta.env.BASE_URL}projects/colter-roll.png`,
     isReel: true,
     className: "project-card project-card--wide",
   },
   {
-    slug: "new-form",
+    slug: "showcase-reel",
     num: "02",
+    title: "Showcase Reel",
+    category: "Capabilities / Motion",
+    video: `${import.meta.env.BASE_URL}video/client_showcase_30s.mp4`,
+    poster: `${import.meta.env.BASE_URL}video/client_showcase_thumbnail.png`,
+    isVideo: true,
+    className: "project-card project-card--portrait",
+  },
+  {
+    slug: "new-form",
+    num: "03",
     title: "New Form",
     category: "Fashion / Digital",
     image:
@@ -48,7 +58,7 @@ const projects = [
   },
   {
     slug: "signal",
-    num: "03",
+    num: "04",
     title: "Signal",
     category: "Technology / Identity",
     image:
@@ -57,7 +67,7 @@ const projects = [
   },
   {
     slug: "ritual",
-    num: "04",
+    num: "05",
     title: "Ritual",
     category: "Art / Experience",
     image:
@@ -232,12 +242,26 @@ function App() {
                 handleOpenProject(project.slug);
               }}
             >
-              {project.isReel ? (
+              {project.isVideo ? (
+                <div className="absolute inset-0 overflow-hidden bg-black">
+                  <video
+                    src={project.video}
+                    poster={project.poster}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="colter-reel-vignette-top" />
+                  <div className="colter-reel-vignette-bottom" />
+                </div>
+              ) : project.isReel ? (
                 <div className="colter-reel-container">
                   <div className="colter-reel-vignette-top" />
                   <div className="colter-reel-track">
-                    <img src={project.image} alt="Agency Capabilities Motion Deck" />
-                    <img src={project.image} alt="Agency Capabilities Motion Deck Repeat" />
+                    <img src={project.image} alt="Colter Media Brand Guidelines Deck" />
+                    <img src={project.image} alt="Colter Media Brand Guidelines Deck Repeat" />
                   </div>
                   <div className="colter-reel-vignette-bottom" />
                 </div>

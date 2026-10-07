@@ -164,6 +164,28 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({
                   : 'Showing 9:16 Mobile & Social Feed Cut (1080×1920 @ 30 FPS)'}
               </p>
             </div>
+          ) : project.isReel && project.heroImage ? (
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-xs uppercase tracking-widest text-[#E63B19] flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#E63B19] animate-pulse" />
+                  Live Brand Guidelines Continuous Deck
+                </span>
+                <span className="font-mono text-[10px] text-[#8D8B91] uppercase tracking-wider">
+                  Scrollable / Interactive Document Stream
+                </span>
+              </div>
+              <div className="relative w-full h-[520px] sm:h-[620px] overflow-hidden border border-[#2B2A28] bg-[#141316]">
+                <div className="colter-reel-container">
+                  <div className="colter-reel-vignette-top" />
+                  <div className="colter-reel-track">
+                    <img src={project.heroImage} alt={`${project.title} Brand Guidelines Manual`} />
+                    <img src={project.heroImage} alt={`${project.title} Brand Guidelines Manual Repeat`} />
+                  </div>
+                  <div className="colter-reel-vignette-bottom" />
+                </div>
+              </div>
+            </div>
           ) : project.heroImage ? (
             <div className="relative w-full overflow-hidden border border-[#2B2A28] bg-black">
               <img

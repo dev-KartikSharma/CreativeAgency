@@ -4,4 +4,6 @@ figma
 dist
 tests
 .playwright-mcp
+showcase-video
+.agents
 *.zip
