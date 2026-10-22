@@ -165,7 +165,7 @@ function App() {
       <section className="hero">
         <div className="hero-meta">
           <span>Creative agency for ambitious brands</span>
-          <span>Los Angeles / Working worldwide</span>
+          <span>India / Working worldwide</span>
         </div>
 
         <div className="hero-stage">
@@ -200,9 +200,9 @@ function App() {
           <p>Senior minds, close collaboration and no unnecessary layers between the idea and the work.</p>
         </div>
         {[
-          ["3.5M+", "Organic views"],
-          ["50+", "Projects shipped"],
-          ["15+", "Partners worldwide"],
+          ["100K+", "Organic views"],
+          ["10+", "Projects shipped"],
+          ["5+", "Clients worked"],
         ].map(([value, label]) => (
           <div className="proof-stat" key={label}>
             <strong>{value}</strong>
