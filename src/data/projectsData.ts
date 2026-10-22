@@ -159,6 +159,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     tagline: "Redefining contemporary haute couture through tactile digital commerce",
     overview:
       "New Form bridges avant-garde runway garments with an unapologetically brutalist digital flagship. We engineered a high-fidelity digital store that mirrors the sensory weight and architectural cuts of high fashion fabrics.",
+    videoHorizontal: "/video/showreel1.mp4",
     heroImage:
       "https://images.unsplash.com/photo-1715784337197-70ef917be0e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1400",
     deliverables: [

@@ -52,8 +52,9 @@ const projects = [
     num: "03",
     title: "New Form",
     category: "Fashion / Digital",
-    image:
-      "https://images.unsplash.com/photo-1715784337197-70ef917be0e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
+    video: `${import.meta.env.BASE_URL}video/showreel1.mp4`,
+    poster: "https://images.unsplash.com/photo-1715784337197-70ef917be0e7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1200",
+    isVideo: true,
     className: "project-card project-card--square",
   },
   {
