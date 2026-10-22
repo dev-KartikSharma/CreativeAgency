@@ -208,6 +208,7 @@ export const PROJECTS_DATA: Record<string, ProjectDetail> = {
     tagline: "Visual clarity for decentralized communications infrastructure",
     overview:
       "Signal builds cryptographic protocol networks. Our challenge was translating zero-knowledge mathematics and decentralized relays into a razor-sharp, human-readable visual language that engineers and enterprise clients instantly trust.",
+    videoHorizontal: "/video/MotionReelBeTF.mp4",
     heroImage:
       "https://images.unsplash.com/photo-1722170225004-929efa1546f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1400",
     deliverables: [

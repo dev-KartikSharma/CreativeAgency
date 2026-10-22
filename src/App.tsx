@@ -62,8 +62,9 @@ const projects = [
     num: "04",
     title: "Signal",
     category: "Technology / Identity",
-    image:
-      "https://images.unsplash.com/photo-1722170225004-929efa1546f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1400",
+    video: `${import.meta.env.BASE_URL}video/MotionReelBeTF.mp4`,
+    poster: "https://images.unsplash.com/photo-1722170225004-929efa1546f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=85&w=1400",
+    isVideo: true,
     className: "project-card project-card--landscape",
   },
 ];
