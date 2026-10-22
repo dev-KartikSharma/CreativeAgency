@@ -170,12 +170,12 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 Start a conversation
               </h3>
 
-              {/* Action 1: Connect to Call Button */}
+              {/* Action 1: Chat on WhatsApp */}
               <a
-                href="https://cal.com"
+                href="https://wa.me/919599829714?text=Hi%20Kartik,%20saw%20your%20portfolio"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Connect to Call or Schedule Meeting"
+                aria-label="Chat with us on WhatsApp"
                 className="group relative flex items-center justify-between bg-white text-black p-5 sm:p-7 rounded-[4px] overflow-hidden hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 ease-out cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#E63B19]"
               >
                 <div
@@ -184,10 +184,10 @@ export const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) =
                 />
                 <div className="relative z-10 flex flex-col">
                   <span className="font-display font-black text-2xl sm:text-3xl lg:text-[34px] uppercase text-black group-hover:text-white transition-colors duration-200 leading-none">
-                    Book a Call
+                    Chat on WhatsApp
                   </span>
                   <span className="font-mono text-[10px] sm:text-[11px] text-[#555] group-hover:text-white/80 transition-colors duration-200 uppercase tracking-widest mt-1.5">
-                    15-min discovery & strategy
+                    Direct chat & voice notes
                   </span>
                 </div>
                 <div className="relative z-10 w-11 h-11 rounded-full bg-black flex items-center justify-center shrink-0 transition-transform duration-200 group-hover:scale-105">

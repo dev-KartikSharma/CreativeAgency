@@ -345,7 +345,7 @@ function App() {
           </a>
           <div>
             <a href="https://www.instagram.com/kartik.ssharma_/" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="#">LinkedIn</a>
+            <a href="https://wa.me/919599829714?text=Hi%20Kartik,%20saw%20your%20portfolio" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
           <span>© 2026 CM Studio</span>
         </div>
