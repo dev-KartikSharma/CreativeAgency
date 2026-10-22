@@ -289,30 +289,95 @@ export const ProjectPage: React.FC<ProjectPageProps> = ({
         </section>
       )}
 
-      {/* Gallery Section */}
-      {project.gallery && project.gallery.length > 0 && (
-        <section className="px-4 sm:px-8 md:px-16 py-16 sm:py-24 border-b border-[#2B2A28]">
+      {/* Other Showcases Section */}
+      {allSlugs.filter((slug) => slug !== project.slug).length > 0 && (
+        <section className="px-4 sm:px-8 md:px-16 py-16 sm:py-24 border-b border-[#2B2A28] bg-[#141316]">
           <div className="max-w-6xl mx-auto">
-            <span className="font-mono text-xs uppercase tracking-widest text-[#E63B19] block mb-6">
-              Visual Archives
-            </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.gallery.map((item, idx) => (
-                <figure
-                  key={idx}
-                  className="group relative overflow-hidden bg-black border border-[#2B2A28]"
-                >
-                  <img
-                    src={item.image}
-                    alt={item.caption}
-                    className="w-full h-80 sm:h-96 object-cover filter grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
-                  />
-                  <figcaption className="p-4 bg-[#111012] border-t border-[#2B2A28] font-mono text-xs text-[#8D8B91] flex items-center justify-between">
-                    <span>{item.caption}</span>
-                    <span className="text-[#E63B19]">0{idx + 1}</span>
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-6 border-b border-[#2B2A28]">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-widest text-[#E63B19] block mb-2">
+                  Selected Works
+                </span>
+                <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-white leading-none">
+                  Other Showcases
+                </h2>
+              </div>
+              <button
+                type="button"
+                onClick={onBack}
+                className="font-mono text-xs text-[#8D8B91] hover:text-[#E63B19] uppercase tracking-wider flex items-center gap-2 cursor-pointer transition-colors"
+              >
+                <span>View all 4 showcases</span>
+                <span>↗</span>
+              </button>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {allSlugs
+                .filter((slug) => slug !== project.slug)
+                .map((slug) => {
+                  const other = PROJECTS_DATA[slug];
+                  if (!other) return null;
+                  return (
+                    <div
+                      key={other.slug}
+                      onClick={() => onSelectProject ? onSelectProject(other.slug) : (window.location.hash = `#/project/${other.slug}`)}
+                      className="group cursor-pointer flex flex-col bg-[#111012] border border-[#2B2A28] hover:border-[#E63B19] transition-all duration-300 overflow-hidden"
+                    >
+                      <div className="relative aspect-[16/10] overflow-hidden bg-black">
+                        {other.videoHorizontal ? (
+                          <video
+                            src={other.videoHorizontal}
+                            poster={other.videoPoster || other.heroImage}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                          />
+                        ) : other.isReel && other.heroImage ? (
+                          <div className="w-full h-full relative overflow-hidden">
+                            <img
+                              src={other.heroImage}
+                              alt={other.title}
+                              className="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#111012] via-transparent to-transparent opacity-80" />
+                          </div>
+                        ) : other.heroImage ? (
+                          <img
+                            src={other.heroImage}
+                            alt={other.title}
+                            className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                          />
+                        ) : null}
+                        <span className="absolute top-3 left-3 px-2 py-0.5 rounded-full border border-white/30 bg-[#111012]/80 backdrop-blur-sm font-mono text-[9px] text-white">
+                          {other.num}
+                        </span>
+                        <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-[#E63B19] text-[#111012] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100 font-bold">
+                          ↗
+                        </div>
+                      </div>
+
+                      <div className="p-5 flex flex-col justify-between flex-1 gap-4">
+                        <div>
+                          <span className="font-mono text-[10px] text-[#E63B19] uppercase tracking-wider block mb-1">
+                            {other.category}
+                          </span>
+                          <h3 className="font-display font-black text-2xl uppercase tracking-tight text-white group-hover:text-[#E63B19] transition-colors">
+                            {other.title}
+                          </h3>
+                        </div>
+                        <div className="pt-3 border-t border-[#2B2A28] flex items-center justify-between font-mono text-[11px] text-[#8D8B91]">
+                          <span>{other.year}</span>
+                          <span className="text-white group-hover:translate-x-1 transition-transform flex items-center gap-1">
+                            Explore <span>→</span>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
             </div>
           </div>
         </section>
